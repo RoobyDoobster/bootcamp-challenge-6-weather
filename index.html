@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Rubik Mono One'>
+        <link rel="stylesheet" href="./assets/jass.css">
+        <link rel="stylesheet" href="./assets/style.css">
+        <title>Weather Dashboard</title>
+    </head>
+
+    <body class="bg-orange">
+        <header class="header container-fluid text-center text-orange bg-dark p-3">
+            <h1>Weather Dashboard</h1>
+        </header>
+
+        <div>
+            <aside class="search mt-1 ml-2">
+                <h2>
+                    Search for a City:
+                </h2>
+                <form>
+                    <div>
+                        <input
+                        style="font-family: BlinkMacSystemFont;"
+                        type="text"
+                        placeholder="Search..."
+                        />
+                    </div>
+                    <div>
+                        <button 
+                        class="bg-dark text-orange btn"
+                        type="submit"
+                        >Search</button>
+                    </div>
+                </form>
+                <div class="history">History</div>
+            </aside>
+            <div class="results">
+                <section class="todayResults">
+                    Today's Weather
+                </section>
+                <section class="fiveDay">
+                    Five Day Foracast
+                </section>
+            </div>
+        </div>
+        <script src="./assets/script.js"></script>
+    </body>
+</html>
