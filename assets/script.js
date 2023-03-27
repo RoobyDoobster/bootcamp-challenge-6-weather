@@ -13,14 +13,15 @@ var todayResults = document.querySelector('.todayResults');
 var history = document.querySelector('.history');
 var searchCity = document.querySelector('#city');
 
-function getAPI(city) {
-    var requestURL = `${APIRootUrl}/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`;
+function getCityCoordinates(city) {
+    var requestURL = `${APIRootUrl}/data/2.5/weather?q=${city}&limit=1&appid=${APIKey}&units=imperial`;
     fetch(requestURL)
     .then(function (res) {
         return res.json();
     })
     .then(function (data) {
         getFiveDay(data.coord.lat, data.coord.lon);
+        getCurrWeather(data.coord.lat, data.coord.lon);
     });
 }
 
@@ -125,7 +126,7 @@ function getHistory() {
 function getDay(city) {
     var date = dayjs().format(`MM/DD/YYYY`);
     var currDay = todayResults;
-    currDay[0].textContent = city+ ' ' +date
+    currDay[0].textContent = `${city} ${date}`
     
     var nextFiveDays = $('h4');
     for(let i = 0; i < nextFiveDays.length; i++) {
@@ -134,11 +135,11 @@ function getDay(city) {
 };
 
 searchButton.addEventListener('click', (e) => {
-    e.preventDefault()
-    getAPI(searchCity.value.toUpperCase())
-    getDay(searchCity.value.toUpperCase())
-    getHistory(searchCity.value.toUpperCase())
-    getHistory()
+    e.preventDefault();
+    getCityCoordinates(searchCity.value.toUpperCase());
+    getDay(searchCity.value.toUpperCase());
+    getHistory(searchCity.value.toUpperCase());
+    getHistory();
 });
 
 function init() {
