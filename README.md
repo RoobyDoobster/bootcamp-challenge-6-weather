@@ -16,6 +16,10 @@ Deployed on Github Pages
 
 Open the deployed website and enter the desired city to see a forcast.
 
+## Credits
+
+Open Weahter Map API [website] (https://openweathermap.org/)
+
 ## Authors
 
 Reuben Schmolke [Github](https://github.com/RoobyDoobster)
