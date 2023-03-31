@@ -20,31 +20,33 @@
             <h1>Weather Dashboard</h1>
         </header>
 
-        <div>
-            <aside class="search mt-1 ml-2">
-                <h2>
-                    Search for a City:
-                </h2>
-                <form class="searchForm">
-                    <div>
-                        <input
-                        class="searchInput"
-                        id="city"
-                        style="font-family: BlinkMacSystemFont;"
-                        type="text"
-                        placeholder="Search..."
-                        />
-                    </div>
-                    <div>
-                        <button 
-                        class="searchButton bg-dark text-orange btn"
-                        type="submit"
-                        >Search</button>
-                    </div>
-                    <div class="history"></div>
-                </form>
-            </aside>
-            <div class="results">
+        <div class="container-fluid">
+            <div class="row">
+                <aside class="search mt-1 ml-2 col-lg-3 pb-3">
+                    <h2>
+                        Search for a City:
+                    </h2>
+                    <form class="searchForm">
+                        <div>
+                            <input
+                            class="searchInput"
+                            id="city"
+                            style="font-family: BlinkMacSystemFont;"
+                            type="text"
+                            placeholder="Search..."
+                            />
+                        </div>
+                        <div>
+                            <button 
+                            class="searchButton bg-dark text-orange btn"
+                            type="submit"
+                            >Search</button>
+                        </div>
+                        <div class="history"></div>
+                    </form>
+                </aside>
+            </div>
+            <div class="results col-lg-9 pb-3">
                 <section>
                     <h2 class="todayResults"></h2>
                     <p id="temp0"></p>
@@ -52,36 +54,36 @@
                     <p id="hum0"></p>
                 </section>
                 <section class="fiveDay">
-                    <div class="row">
-                        <div class="card">
-                            <div class="card-body">
+                    <div class="card bg-dark text-orange">
+                        <div class="row">
+                            <div class="card-body m-3">
                                 <img id="img1">
                                 <p class="card-text" id="temp1"></p>
                                 <p class="card-text" id="wind1"></p>
                                 <p class="card-text" id="hum1"></p>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body m-3">
                                 <h4></h4>
                                 <img id="img2">
                                 <p class="card-text" id="temp2"></p>
                                 <p class="card-text" id="wind2"></p>
                                 <p class="card-text" id="hum2"></p>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body m-3">
                                 <h4></h4>
                                 <img id="img3">
                                 <p class="card-text" id="temp3"></p>
                                 <p class="card-text" id="wind3"></p>
                                 <p class="card-text" id="hum3"></p>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body m-3">
                                 <h4></h4>
                                 <img id="img4">
                                 <p class="card-text" id="temp4"></p>
                                 <p class="card-text" id="wind4"></p>
                                 <p class="card-text" id="hum4"></p>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body m-3">
                                 <h4></h4>
                                 <img id="img5">
                                 <p class="card-text" id="temp5"></p>
